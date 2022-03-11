@@ -5,7 +5,7 @@
 /**
  * main - Determines if a value is positive, negative or zero.
  *
- * Return - Always 0 (success)
+ * Return: Always 0 when it runs successfully
 */
 int main(void)
 {

@@ -3,20 +3,21 @@
 
 
 /**
-*main - Prints out alphabets from a to z
-*
-*Return:Does not return any value
+*print_alphabet - prints alphabets from a to z
 */
 
 void print_alphabet(void)
 {
+	char ch;
 
-	char ch = 'a'
-	while(ch <= z)
+	ch = 'a';
+
+	while (ch <= 'z')
 	{
-		_putchar ch;
-		ch++
+		_putchar (ch);
+
+		ch++;
 	}
-	
-	_putchar('\n')
+
+	_putchar('\n');
 }

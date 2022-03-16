@@ -9,7 +9,7 @@
  * Return: returns the last value of the int
 */
 
-int print_last_digit(int i)
+int print_last_digit(int n)
 {
 	int last_digit = n % 10;
 

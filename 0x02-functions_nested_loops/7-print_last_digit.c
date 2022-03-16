@@ -4,7 +4,7 @@
 /**
  * print_last_digit - This function prints the last digit of an int
  *
- * @i: This is the int passed as an argument
+ * @n: This is the int passed as an argument
  *
  * Return: returns the last value of the int
 */

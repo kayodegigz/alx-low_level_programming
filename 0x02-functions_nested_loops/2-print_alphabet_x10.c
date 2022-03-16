@@ -3,7 +3,7 @@
 
 
 /**
-*print_alphabet - prints alphabets from a to z
+*print_alphabet_x10 - prints alphabets from a to z 10 times
 */
 
 void print_alphabet_x10(void)

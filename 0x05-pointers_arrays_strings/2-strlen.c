@@ -2,12 +2,15 @@
 #include "main.h"
 
 /**
- * _strlen - function gives the length ofd the string
- *  
- * @s: The character to be checked
+ * _strlen - returns the length of a string.
+ * @s: input string.
+ * Return: length of a string.
  */
-
 int _strlen(char *s)
 {
-        return (strlen(*s))
+	int count = 0;
+
+	while (*(s + count) != '\0')
+		count++;
+	return (count);
 }

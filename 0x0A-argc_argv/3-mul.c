@@ -7,7 +7,7 @@
  * @argv: string array of arguments
  * return: 1 if unsuccessful, 0 if successful
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
     if (argc != 3)
     {

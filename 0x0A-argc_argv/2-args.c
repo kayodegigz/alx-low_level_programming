@@ -4,8 +4,8 @@
  * main - prints all the arguements
  *
  * @argc: the number of arguments passed
- * argv: the array of arguments passed
- * @return int
+ * @argv: the array of arguments passed
+ * Return: int
  */
 int main(int argc, char *argv[])
 {
@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
     for (i = 0; i < (argc - 1); i++)
     {
-        printf("%d\n",argv[i]);
+        printf("%s\n",argv[i]);
         Return (0);
     }
 }

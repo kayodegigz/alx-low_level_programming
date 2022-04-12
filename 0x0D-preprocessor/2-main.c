@@ -6,8 +6,8 @@
  * Return: returns 0 if successful
 */
 
-int main()
+int main(void)
 {
-    printf("%s\n",__FILE__);
-    return 0;
+	printf("%s\n", __FILE__);
+	return (0);
 }

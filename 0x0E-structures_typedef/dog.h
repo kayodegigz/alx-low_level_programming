@@ -1,3 +1,5 @@
+#ifndef _dog_
+#define _dog_
 /**
  * struct dog - contains the details of the dog
  * @name: name of the dog
@@ -9,8 +11,6 @@
  * Description: the structure contains details of the dog
  */
 
-#ifndef _dog_
-#define _dog_
 
 struct dog
 {

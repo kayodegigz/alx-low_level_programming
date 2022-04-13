@@ -9,14 +9,14 @@ void print_dog(struct dog *d)
         {
             (*d).name = "nill";
         }
-        // else if ((char)((*d).age) == NULL)
-        // {
-        //     (char)((*d).age) = "(nill)";   
-        // }
+        /*else if ((char)((*d).age) == NULL)
+        {
+            (char)((*d).age) = "(nill)";   
+        }
         else if ((*d).owner == NULL)
         {
             (*d).owner = "(nill)";
-        }
+        }*/
         
         
         printf("Name: %s\n",(*d).name);

@@ -13,20 +13,22 @@ void print_dog(struct dog *d)
 	{
 		if ((*d).name == NULL)
 		{
-			(*d).name = "nill";
+			printf("Name: (nill)\n");
 		}
-		/**
-		 * else if ((char)((*d).age) == NULL)
-		 * {
-		 * char)((*d).age) = "(nill)";
-		 * }
-		 */
-		else if ((*d).owner == NULL)
+        else
+        {
+            printf("Name: %s\n", (*d).name);
+        }
+
+        printf("Age: %f\n", (*d).age);
+
+		if ((*d).owner == NULL)
 		{
-			(*d).owner = "(nill)";
+			printf("Owner: (nill)\n");
 		}
-		printf("Name: %s\n", (*d).name);
-		printf("Age: %f\n", (*d).age);
-		printf("Owner: %s\n", (*d).owner);
+        else
+        {
+            printf("Owner: %s\n", (*d).owner);
+        }
 	}
 }

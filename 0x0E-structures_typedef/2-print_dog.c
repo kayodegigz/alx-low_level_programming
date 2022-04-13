@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "dog.h"
 
+/**
+ * print_dog - prints out a structure
+ * 
+ * @d: the struct name
+ */
+
 void print_dog(struct dog *d)
 {
     if (d)

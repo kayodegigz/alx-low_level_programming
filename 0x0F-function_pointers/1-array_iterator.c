@@ -2,22 +2,21 @@
 
 /**
  * array_iterator - a function thatiterates through a given array
- * 
+ *
  * @array: the address of the array to be passed
- * @size: size of the array 
+ * @size: size of the array
  * @action: the function pointer
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-    if (array && action)
-    {
-        unsigned int i;
+	if (array && action)
+	{
+		unsigned int i;
 
-        for (i = 0; i < size; i++)
-        {
-            action(array[i]);
-        }
-        
-    }
+		for (i = 0; i < size; i++)
+		{
+			action(array[i]);
+		}
+	}
 }

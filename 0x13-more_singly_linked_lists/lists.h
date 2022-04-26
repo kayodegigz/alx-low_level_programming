@@ -2,6 +2,7 @@
 #define _list_
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * struct listint_s - a node that contains an int and a pointer

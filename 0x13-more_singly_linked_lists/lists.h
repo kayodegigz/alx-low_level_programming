@@ -1,6 +1,8 @@
 #ifndef _list_
 #define _list_
 
+#include <stdio.h>
+
 /**
  * struct listint_t - a node that contains an int and a pointer
  *

@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_listint
+ * print_listint - prints a all the items in the list
  *
  * @h: address of the first node
  *
@@ -11,9 +11,9 @@
 
 size_t print_listint(const listint_t *h)
 {
-    while (h)
-    {
-        printf("%d\n", h->num);
-        h = h->next;
-    }
+	while (h)
+	{
+		printf("%d\n", h->num);
+		h = h->next;
+	}
 }

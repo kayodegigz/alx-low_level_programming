@@ -8,7 +8,7 @@
 
 typedef struct listint_t
 {
-    int num;
+    int n;
     struct node *next;
 }listint_t;
 

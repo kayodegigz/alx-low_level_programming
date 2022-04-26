@@ -9,7 +9,7 @@
 typedef struct listint_t
 {
     int n;
-    struct node *next;
+    struct listint_t *next;
 }listint_t;
 
 int _putchar(char c);

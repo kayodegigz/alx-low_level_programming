@@ -17,27 +17,28 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	listint_t *last = *head;
 
-	if (new_node)
-	{	new_node->n = n;
-		new_node->next = NULL;
+    if (new_node == NULL)
+    {
+        return (NULL);
+    }
 
-		if (*head == NULL) /*If the node is empty*/
-		{
-			*head = new_node;
-			return (new_node);
-		}
-        else
-		{
-            while (last->next != NULL)
-		    {
-			    last = last->next;
-		    }
 
-		    last->next = new_node;
-		    return (new_node);
-        }
+    new_node->n = n;
+	new_node->next = NULL;
+
+	if (*head == NULL) /*If the node is empty*/
+	{
+		*head = new_node;
 	}
+    else
+	{
+        while (last->next != NULL)
+	    {
+		    last = last->next;
+	    }
 
-	return (NULL);
+	    last->next = new_node;
+    }
+    return (*head);
 	free(new_node);
 }

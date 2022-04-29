@@ -18,11 +18,10 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	}
 
 	bit_checker = 1 << index;
-	
-    if (*n & bit_checker)
-    {
-        *n = *n ^ bit_checker;
-    }
-    
+
+	if (*n & bit_checker)
+	{
+		*n = *n ^ bit_checker;
+	}
 	return (1);
 }

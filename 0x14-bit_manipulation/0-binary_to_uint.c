@@ -15,6 +15,11 @@ unsigned int binary_to_uint(const char *b)
 	int raised_to_power = 1;
 	unsigned int dec_value = 0;
 
+    if(!b)
+    {
+        return (0);
+    }
+
 	while (b[i] != '\0')
 	{
 		len++;
@@ -22,7 +27,7 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = 0; i <= len; i++)
 	{
-		if (b[i] != '0' && b[i] != '1' || b == NULL)
+		if (b[i] != '0' && b[i] != '1')
 		{
 			return (0);
 		}

@@ -19,5 +19,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	bit_or_checker = 1 << index;
 	*n = (*n | bit_or_checker);
-	return (*n);
+	return (1);
 }

@@ -15,17 +15,17 @@ unsigned int binary_to_uint(const char *b)
 	int raised_to_power = 1;
 	unsigned int dec_value = 0;
 
-    if(!b)
-    {
-        return (0);
-    }
+	if (!b)
+	{
+		return (0);
+	}
 
 	while (b[i] != '\0')
 	{
 		len++;
 	}
 
-	for (i = 0; i <= len; i++)
+	for (i = 0; i < len; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
 		{

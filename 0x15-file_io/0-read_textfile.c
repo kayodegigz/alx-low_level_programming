@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * read_textfile - reads text of a given number of bytes from a file
+ *
+ * @filename: the file to be accessed
+ * @letters: the maximum number of bytes to be allocated
+ * Return: returns the number of bytes successfully written
+ */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
     int fd;

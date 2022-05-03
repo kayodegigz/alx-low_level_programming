@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t bytes_read, bytes_written; /*bytes successfully written and read*/
 	char *buf; /*buffer for temporarily storing the text*/
 
-	if (filename == NULL)
+	if (!filename)
 	{
 		return (0);
 	}

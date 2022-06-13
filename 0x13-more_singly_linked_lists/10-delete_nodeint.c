@@ -27,7 +27,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		node_counter++;
 	}
 
-	if (moving_node == NULL && index > node_counter)
+	if (moving_node->next == NULL && index > node_counter)
 	{
 		return (-1); 
 	/**means the index is out of range cos if it wasn't it'd not reach the NULL address*/

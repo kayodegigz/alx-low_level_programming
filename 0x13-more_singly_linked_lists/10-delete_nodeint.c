@@ -5,8 +5,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t* moving_node; /*this node will traverse thru the list 4rm d head*/
 	listint_t* prev; /*the node that follows moving node*/
+	unsigned int node_counter;
+
 	moving_node = *head;
-	unsigned int node_counter = 0;
+	node_counter = 0;
 
 	if ((*head) != NULL && node_counter == index) 
 	/**check if the head node should be removed*/

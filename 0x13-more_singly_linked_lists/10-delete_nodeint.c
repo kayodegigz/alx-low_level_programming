@@ -1,10 +1,19 @@
 #include "lists.h"
 
+/**
+ *delete_nodeint_at_index - deletes a node at an index
+ *
+ * @head: the pointer to the head node
+ *
+ * @index: the index of the node to be removed
+ *
+ * Return: 1 if successfu;, -1 otherwise
+ */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t* moving_node; /*this node will traverse thru the list 4rm d head*/
-	listint_t* prev; /*the node that follows moving node*/
+	listint_t *moving_node; /*this node will traverse thru the list 4rm d head*/
+	listint_t *prev; /*the node that follows moving node*/
 	unsigned int node_counter;
 
 	moving_node = *head;
@@ -15,7 +24,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (-1);
 	}
 
-	if ((*head) != NULL && node_counter == index) 
+	if ((*head) != NULL && node_counter == index)
 	/**check if the head node should be removed*/
 	{
 		*head = moving_node->next;
@@ -34,10 +43,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (moving_node->next == NULL && index > node_counter)
 	{
-		return (-1); 
-	/**means the index is out of range cos if it wasn't it'd not reach the NULL address*/
+		return (-1);
+	/**
+	 *means the index is out of range cos if
+	 * it wasn't it'd not reach the NULL address
+	 */
 	}
-
 	prev->next = moving_node->next;
 	free(moving_node);
 	return (1);

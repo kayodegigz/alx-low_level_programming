@@ -10,6 +10,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	moving_node = *head;
 	node_counter = 0;
 
+	if (head == NULL)
+	{
+		return (-1);
+	}
+
 	if ((*head) != NULL && node_counter == index) 
 	/**check if the head node should be removed*/
 	{

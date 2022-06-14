@@ -47,12 +47,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		temp = temp->next;
 		node_count++;
 	}
-	if (temp->next == NULL && node_count++ == idx)
+	if (temp->next == NULL && idx > node_count)
 	{/*add at the end of list*/
-		temp->next = new_node;
-		new_node->prev = temp;
-		new_node->next = NULL;
-		return (new_node);
+		/**
+		 * temp->next = new_node;
+		 *new_node->prev = temp;
+		 *new_node->next = NULL;
+		 *return (new_node);
+		 */
+		return (NULL);
 	}
 	new_node->prev = temp->prev;
 	temp->prev->next = new_node;

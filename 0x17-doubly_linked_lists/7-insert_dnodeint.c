@@ -22,25 +22,23 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	new_node->n = n;
 
-	if (temp == NULL)
-	{
-		if (node_count == idx) /*add node at index 0 to an empty list*/
+	if (node_count == idx)
+	{/*add node at index 0 to an empty list*/
+		if (temp == NULL)
 		{
 			new_node->prev = NULL;
-			new_node->next = NULL;
+			new_node->next = temp;
 			*h = new_node;
 			return (new_node);
 		}
-		else
-			return (NULL); /*means idx>0 & can't add idx>0 to empty list*/
-	}
-	if (temp->next == NULL && node_count == idx)/*add to front of list len=1 */
-	{
-		new_node->prev = NULL;
-		new_node->next = temp;
-		temp->prev = new_node;
-		*h = new_node;
-		return (new_node);
+		else /*if temp is not NULL and element added to add to front*/
+		{
+			new_node->prev = NULL;
+			new_node->next = temp;
+			temp->prev = new_node;
+			*h = new_node;
+			return (new_node);
+		}
 	}
 	while (temp->next != NULL && node_count < idx)
 	{

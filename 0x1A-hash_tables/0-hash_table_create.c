@@ -25,11 +25,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 		return (NULL);
 	}
-
+	/**
 	for(i = 0; i < size; i++)
 	{
 		new_hash_t->array[i] = NULL;
 	}
-
+	*/
 	return (new_hash_t);
 }

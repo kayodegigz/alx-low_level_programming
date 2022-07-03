@@ -47,13 +47,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_h_node->key == NULL)
 		return (0);
         new_h_node->value = value_dup;
-	/*if (ht->array[index] == NULL) if there's no l_list at index*/
+	/*if (ht->array[index] == NULL) if there's no l_list at d index*/
 	/*{
 		ht->array[index] = new_h_node;
 		new_h_node->next = NULL;
 		return (1);
 	}*/
-	new_h_node->next = ht->array[index]->next;
+	new_h_node->next = ht->array[index];
 	ht->array[index] = new_h_node;
 	return (1);
 

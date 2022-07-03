@@ -15,16 +15,17 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	int index = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *temp = ht->array[index];
 
-	if (ht->array[index] == NULL)
-		return NULL;
+	if (ht->array[index] == NULL || ht == NULL)
+		return (NULL);
 
 	while (temp != NULL)
 	{
+		/*check if key is a match*/
 		if (strcmp(temp->key, key) == 0)
 		{
-			return temp->value;
+			return (temp->value);
 		}
 		temp = temp->next;
 	}
-	return NULL;
+	return (NULL);
 }

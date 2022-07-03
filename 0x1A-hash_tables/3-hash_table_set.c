@@ -22,18 +22,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 	{
 		return (0);
-	} 
+	}
+        index = key_index((const unsigned char *)key, ht->size);
 	if (new_h_node == NULL)
 		return (0);
 	value_dup = strdup(value);
 	if (value_dup == NULL)
-		return (1);
+		return (0);
+	temp = ht->array[index];
 	new_h_node->key = strdup(key);
 	if (new_h_node->key == NULL)
 		return (0);
 	new_h_node->value = value_dup;
-	index = key_index((const unsigned char *)key, ht->size);
-	temp = ht->array[index];
 	if (ht->array[index] == NULL) /*if there's no l_list at index*/
 	{
 		ht->array[index] = new_h_node;

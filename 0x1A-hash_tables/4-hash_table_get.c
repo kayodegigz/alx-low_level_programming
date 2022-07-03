@@ -21,7 +21,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	 * third is for if key is NULL
 	 * fourth is for when key is an empty string
 	 */
-	if (temp == NULL || ht == NULL || key == NULL || *key == "\0")
+	if (temp == NULL || ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 
 	while (temp != NULL)

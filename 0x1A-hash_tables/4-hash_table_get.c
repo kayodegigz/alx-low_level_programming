@@ -12,7 +12,9 @@
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	int index;
+	int index = key_index((const unsigned char *)key, ht->size);
+	hash_node_t *temp = ht->array[index];
+
 	/**
 	* first cond is for if there's no node at the index
 	* second cond is for if the hash table is NULL
@@ -21,9 +23,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	*/
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
-
-	index = key_index((const unsigned char *)key, ht->size);
-	hash_node_t *temp = ht->array[index];
 
 	while (temp != NULL)
 	{

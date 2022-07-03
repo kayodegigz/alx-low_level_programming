@@ -15,7 +15,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	int index = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *temp = ht->array[index];
 
-	if (ht->array[index] == NULL || ht == NULL)
+	/**
+	 * first cond is for if there's no node at the index
+	 * second cond is for if the hash table is NULL
+	 * third is for if key is NULL
+	 * fourth is for when key is an empty string
+	 */
+	if (temp == NULL || ht == NULL || key == NULL || *key == "\0")
 		return (NULL);
 
 	while (temp != NULL)

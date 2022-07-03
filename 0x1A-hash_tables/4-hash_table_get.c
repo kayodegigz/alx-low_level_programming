@@ -13,7 +13,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	int index;
-	hash_node_t *temp = ht->array[index];
+	hash_node_t *temp;
 
 	/**
 	* first cond is for if there's no node at the index
@@ -25,6 +25,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
+	temp = ht->array[index];
 	while (temp != NULL)
 	{
 		/*check if key is a match*/

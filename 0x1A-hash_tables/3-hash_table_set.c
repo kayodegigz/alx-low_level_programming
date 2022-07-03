@@ -1,5 +1,17 @@
 #include "hash_tables.h"
 
+/**
+ * hash_table_set - sets key values for an item
+ *
+ * @ht: pointer to hash tanle
+ *
+ * @key: key of the node
+ *
+ * @value: value accociated with key
+ *
+ * Return: 1 if successful, 0 if not
+ */
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned int index;
@@ -11,6 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	hash_node_t *new_h_node = malloc(sizeof(hash_node_t));
+
 	if (new_h_node == NULL)
 		return (0);
 	value_dup = strdup(value);
@@ -20,7 +33,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_h_node->value = value_dup;
 	index = key_index(key);
 	temp = ht->array[index];
-
 	if (ht->array[index] == NULL) /*if there's no l_list at index*/
 	{
 		ht->array[index] = new_h_node;
